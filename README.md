@@ -28,7 +28,7 @@ We show a distinctive trend in sales over the year and average total hourly sale
 
 **Summary:** The analysis shows a difference in revenue generated throughout the year across different neighborhoods. Each trend follows a weekly cycle with peaks corresponding to weekends. The best performing neighborhood group is the miscellaneous group called 'other neighborhood', followed by 'Downtown' throughout the first three months of the 2024 financial year.
 
-Furthermore, we establish spatial autocorrelation in the data using Ridley's K function, the Getis'Ord'G statistical test and a hjeat map using Kernel density estimation. We encode this spatial data into regression models in the following way:
+Furthermore, we establish spatial autocorrelation in the data using Ridley's K function, the Getis'Ord'G statistical test and a heat map using Kernel density estimation. We encode this spatial data into regression models in the following way:
 - Model 1: no geometric data. This will be used as a base model to compare our performance.
 - Model 2: includes neighborhood group as a categorical variable.
 - Model 3: includes neighborhood as a categorical variable
