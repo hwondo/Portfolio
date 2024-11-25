@@ -2,7 +2,7 @@
 
 I am currently a Postdoc in Mathematics in a subfield called 'Geometric Anlaysis' - https://arxiv.org/search/math?searchtype=author&query=Wondo,+H. In my spare time I enjoy learning about math related fields such as data analysis and cryptography. This repository is a collection projects I have done. 
 
-CV: [`CV:`](https://github.com/hwondo/Portfolio/blob/main/Wondo_CV.pdf)
+[`CV`](https://github.com/hwondo/Portfolio/blob/main/Wondo_CV.pdf)
 
 ## Data Projects
 
