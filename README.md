@@ -1,13 +1,11 @@
-# Data-Portfolio
-
 ## About
 
-I am currently a Postdoc in Mathematics in a subfield called 'Geometric Anlaysis' - https://arxiv.org/search/math?searchtype=author&query=Wondo,+H. In my spare time I enjoy learning and doing data analysis. This repository is a collection projects I have done. 
+I am currently a Postdoc in Mathematics in a subfield called 'Geometric Anlaysis' - https://arxiv.org/search/math?searchtype=author&query=Wondo,+H. In my spare time I enjoy learning about math related fields such as data analysis and cryptography. This repository is a collection projects I have done. 
 
 ## Data Projects
 
 ### Maven Coffee Sales
-**Code:** [`Analysis_of_Coffee_Sales`](https://github.com/hwondo/Data-Analysis-Portfolio-Files/blob/main/Maven_coffee_sales.ipynb)
+**Code:** [`Analysis_of_Coffee_Sales`](https://github.com/hwondo/Portfolio-Files/blob/main/Maven_coffee_sales.ipynb)
 
 **Goal:** Understand Sales Trends Across (Fictional) Coffee Shops in New York
 
@@ -20,7 +18,7 @@ We show a distinctive trend in sales over the year and average total hourly sale
 
 ### Geospatial and Sentimental Analysis for Seattle Airbnb Dataset
 
-**Code:** [`Analysis_Sattle_Airbnb`](https://github.com/hwondo/Data-Analysis-Portfolio-Files/blob/main/Seattle_Airbnb_analysis.ipynb)
+**Code:** [`Analysis_Sattle_Airbnb`](https://github.com/hwondo/Portfolio-Files/blob/main/Seattle_Airbnb_analysis.ipynb)
 
 **Goal:** Create a regression model that gives recomendations for reservation price. 
 
@@ -39,7 +37,7 @@ In our final regression model, we apply an OLS regression with neighborhood as a
 
 ### Evaluation of Regression Techniques on Housing Price Data
 
-**Code:** [`Analysis_Housing_Regression`](https://github.com/hwondo/Data-Analysis-Portfolio-Files/blob/main/Housing%20Prices%20Prediction%20Models.ipynb)
+**Code:** [`Analysis_Housing_Regression`](https://github.com/hwondo/Portfolio-Files/blob/main/Housing%20Prices%20Prediction%20Models.ipynb)
 
 **Goal:** Evaluate various regression models using a comprehemsive evalaution method by Zhan-Liu-Wu-Zhao-Chow (https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835#sec4).
 
@@ -56,5 +54,11 @@ The evalution method uses 13 evaluation metrics and ranks each model for each me
 
 **Results:** Using the evaluation procedure described above, we obtain a 'best' performance model, which in our case is an OLS Lasso model. However, the statistical tests reveal that there is no significant difference in performance of the five standard models used.
 
+## Cryptography Projects 
 
+### RSA and ElGamal 
+
+Python code that implements RSA and ElGamal.
+
+**Code:** [`cryptography`](https://github.com/hwondo/Portfolio-Files/blob/main/Cryptography.ipynb)
 
