@@ -4,6 +4,17 @@ I am currently a Postdoc in Mathematics in a subfield called 'Geometric Anlaysis
 
 [`CV`](https://github.com/hwondo/Portfolio/blob/main/Wondo_CV.pdf)
 
+## Table of contents
+- [About](#about)
+- [Data Projects](#data-projects)
+    + [Maven Coffee Sales](#maven-coffee-sales)
+    + [Geospatial and Sentimental Analysis for Seattle Airbnb Dataset](#geospatial-and-sentimental-analysis-for-seattle-airbnb-dataset)
+    + [Evaluation of Regression Techniques on Housing Price Data](#evaluation-of-regression-techniques-on-housing-price-data)
+- [Cryptography Projects](#cryptography-projects)
+    + [RSA and ElGamal](#rsa-and-elgamal)
+    + [Elliptic Curve](#elliptic-curve)
+
+
 ## Data Projects
 
 ### Maven Coffee Sales
