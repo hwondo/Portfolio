@@ -1,71 +1,60 @@
 ## About
 
-I am currently a Postdoc in Mathematics in a subfield called 'Geometric Anlaysis' - https://arxiv.org/search/math?searchtype=author&query=Wondo,+H. In my spare time I enjoy learning about math related fields such as data analysis and cryptography. This repository is a collection projects I have done. 
+I am currently a Postdoc in Mathematics conducting research in 'Geometric Analysis' - https://arxiv.org/search/math?searchtype=author&query=Wondo,+H, H. In my spare time, I enjoy learning about math-related fields such as data analysis and cryptography. This repository is a collection of projects I have done. 
 
-My [`CV`](https://github.com/hwondo/Portfolio/blob/main/Wondo_CV.pdf).
+My CV: 
 
 ## Table of contents
 - [About](#about)
 - [Data Projects](#data-projects)
-    + [Maven Coffee Sales](#maven-coffee-sales)
+    + [Predicting Stock Buybacks](#buyback)
     + [Geospatial and Sentimental Analysis for Seattle Airbnb Dataset](#geospatial-and-sentimental-analysis-for-seattle-airbnb-dataset)
-    + [Evaluation of Regression Techniques on Housing Price Data](#evaluation-of-regression-techniques-on-housing-price-data)
 - [Cryptography Projects](#cryptography-projects)
     + [RSA and ElGamal](#rsa-and-elgamal)
     + [Elliptic Curve](#elliptic-curve)
 
-
 ## Data Projects
 
-### Maven Coffee Sales
-**Code:** [`Analysis_of_Coffee_Sales`](https://github.com/hwondo/Portfolio-Files/blob/main/Maven_coffee_sales.ipynb)
+### Predicting Stock Buybacks
 
-**Goal:** Understand Sales Trends Across (Fictional) Coffee Shops in New York
+**Code:** [`Predicting Stock Buybacks`]((https://github.com/hwondo/Stock_Buybacks))
 
-**Data:** https://www.kaggle.com/datasets/agungpambudi/trends-product-coffee-shop-sales-revenue-dataset?resource=download
+**Goal:**  Create a machine learning pipeline for predicting stock repurchases that
+- Gathers data obtained from multiple sources (SEC Edgar, St. Louise FRED and finance).
+- Trains and tunes machine learning models to predict stock buybacks.
+  
+**Data:** Data is obtained from the following sources:
+- Stock data from Yahoo Finance and indices.
+- Financials from 10-Q and 10-K SEC filings reports.
+- Download economic data from FRED.
 
-**Summary:** This analysis is largely exploratory in nature. We use pandasql to query and manipulate the dataset to produce plots for sales trends across different time scales - hourly, daily and yearly. Averages are taken over the data set for each time scale to obtain the trends of a 'typical' day and week.  
+**Summary:** 
+We create two models that predict stock repurchases (buybacks). The model takes inputs consisting of company, stock market and economic data for each quarter and predicts buyback status for the next quarter. More precisely, the first model performs a classification task and predicts whether a buyback will occur. The second model performs a regression task and predicts the cash (in USD) a company will spend on buybacks in that quarter. 
 
-We show a distinctive trend in sales over the year and average total hourly sales. Furthermore, we show strong correlation between similar product types. 
-
+Our final model is a Random Forest Classifier with a weighted F1 score of 0.74 when tested on an unseen validation set. Our final regression model is a single-layer Feedforward Neural Network model with an RMSE score of 1.1373 when tested on an unseen validation set.
 
 ### Geospatial and Sentimental Analysis for Seattle Airbnb Dataset
 
 **Code:** [`Analysis_Sattle_Airbnb`](https://github.com/hwondo/Portfolio-Files/blob/main/Seattle_Airbnb_analysis.ipynb)
 
-**Goal:** Create a regression model that gives recomendations for reservation price. 
+**Goal:** Analysis for Airbnb listings: 
+- Spatial data visualisation and analysis using Folium maps, Ripley K and Getis-Ord statistics. 
+- Produced a time series forecast for revenue using seasonal decomposition. 
+- Created a regression model for price recommendations, involving spatial weights and sentiment from reviews. 
 
 **Data:** https://www.kaggle.com/datasets/swsw1717/seatle-airbnb-open-data-sql-project
 
-**Summary:** The analysis shows a difference in revenue generated throughout the year across different neighborhoods. Each trend follows a weekly cycle with peaks corresponding to weekends. The best performing neighborhood group is the miscellaneous group called 'other neighborhood', followed by 'Downtown' throughout the first three months of the 2024 financial year.
+**Summary:** The analysis shows a difference in revenue generated throughout the year across different neighbourhoods. Each trend follows a weekly cycle with peaks corresponding to weekends. The best performing neighbourhood group is the miscellaneous group called 'other neighbourhood', followed by 'Downtown' throughout the first three months of the 2024 financial year.
 
 Furthermore, we establish spatial autocorrelation in the data using Ridley's K function, the Getis'Ord'G statistical test and a heat map using Kernel density estimation. We encode this spatial data into regression models in the following way:
-- Model 1: no geometric data. This will be used as a base model to compare our performance.
-- Model 2: includes neighborhood group as a categorical variable.
-- Model 3: includes neighborhood as a categorical variable
-- Model 4: includes cluster groups obtained previously as a categorical variable
-- Model 5: includes longitude and latitude as lagged terms in a geometric regression.
+- Baseline Model: no geometric data. This will be used as a base model to compare performances.
+- Model 1: includes neighbourhood group as a categorical variable.
+- Model 2: includes neighbourhood as a categorical variable
+- Model 3: includes cluster groups obtained previously as a categorical variable
+- Model 4: includes longitude and latitude as lagged terms in a geometric regression.
 
-In our final regression model, we apply an OLS regression with neighborhood as a categorical variable and sentiment as a continuous variable. Sentiment is calculated from the reviews of each listing. Tested on a validation set, the model produces predictions with an MSE of 0.04517.
+In our final regression model, we apply an OLS regression with neighbourhood as a categorical variable and sentiment as a continuous variable. Sentiment is calculated from the reviews of each listing. Tested on an unseen validation set, the model produces predictions with an MSE of 0.1008.
 
-### Evaluation of Regression Techniques on Housing Price Data
-
-**Code:** [`Analysis_Housing_Regression`](https://github.com/hwondo/Portfolio-Files/blob/main/Housing%20Prices%20Prediction%20Models.ipynb)
-
-**Goal:** Evaluate various regression models using a comprehemsive evalaution method by Zhan-Liu-Wu-Zhao-Chow (https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835#sec4).
-
-**Data:** https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/data
-
-**Summary:** In this project, we build a variety of industry standard regression models and rank them using a method in "A hybrid machine learning framework for forecasting house price" by Zhan-Liu-Wu-Zhao-Chow (https://www.sciencedirect.com/science/article/abs/pii/S0957417423014835#sec4). The standard insutry regression methods we use are:
-- Ordinary Least Squares Lasso regression
-- Random Forest Regression
-- Ada Boosted regression
-- Nearest neighbors regression
-- Support vector machine.
-
-The evalution method uses 13 evaluation metrics and ranks each model for each metric. The models are then ranked by their mean ranking for each metric. A Friedman and Iman–Davenpor test is used to test for significant variation in the rankings for each model across the evaluation metrics. 
-
-**Results:** Using the evaluation procedure described above, we obtain a 'best' performance model, which in our case is an OLS Lasso model. However, the statistical tests reveal that there is no significant difference in performance of the five standard models used.
 
 ## Cryptography Projects 
 
@@ -73,13 +62,13 @@ The evalution method uses 13 evaluation metrics and ranks each model for each me
 
 Python code that implements RSA and ElGamal.
 
-**Code:** [`RSA and ElGamal`](https://github.com/hwondo/Portfolio-Files/blob/main/RSA_and_Elgamal.ipynb)
+**Code:** [`RSA and ElGamal`](https://github.com/hwondo/cryptography/blob/main/RSA_DiffieHellman.ipynb)
 
 ### Elliptic Curve
 
 Python code that implements elliptic curve key exchange and ElGamal.
 
-**Code:** [`Elliptic Curve Cryptography`](https://github.com/hwondo/Portfolio-Files/blob/main/RSA_and_Elgamal.ipynb)
+**Code:** [`Elliptic Curve Cryptography`](https://github.com/hwondo/cryptography/blob/main/Elliptic_Curve.ipynb)
 
 
 
