@@ -29,7 +29,7 @@ My CV:
 - Download economic data from FRED.
 
 **Summary:** 
-We create two models that predict stock repurchases (buybacks). The model takes inputs consisting of company, stock market and economic data for each quarter and predicts buyback status for the next quarter. More precisely, the first model performs a classification task and predicts whether a buyback will occur. The second model performs a regression task and predicts the cash (in USD) a company will spend on buybacks in that quarter. 
+We create two models that predict stock repurchases (buybacks). The model takes inputs consisting of company, stock market and economic data for each quarter and predicts buyback status for the next quarter. More precisely, the first model performs a classification task, predicting whether a buyback will occur. The second model performs a regression task and predicts the cash (in USD) a company will spend on buybacks in that quarter. 
 
 Our final model is a Random Forest Classifier with a weighted F1 score of 0.74 when tested on an unseen validation set. Our final regression model is a single-layer Feedforward Neural Network model with an RMSE score of 1.1373 when tested on an unseen validation set.
 
@@ -66,10 +66,8 @@ Python code that implements RSA and ElGamal.
 
 ### Elliptic Curve
 
-Python code that implements elliptic curve key exchange and ElGamal.
+Python code that implements elliptic curve key exchange and the ElGamal algorithm.
 
 **Code:** [`Elliptic Curve Cryptography`](https://github.com/hwondo/cryptography/blob/main/Elliptic_Curve.ipynb)
-
-
 
 
