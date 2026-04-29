@@ -2,7 +2,7 @@
 
 Email: hosea.wondo@gmail.com
 
-Postdoctorate researcher in mathematics, looking to move into indsutry to apply quantitative skills in data anlaytics. 
+Postdoctorate researcher in mathematics, looking to apply quantitative skills in data anlaytics. 
 
 Here is a collection of data projects I have worked on. 
 - [Ecommerce Sales Analytics](https://github.com/hwondo/EcommerceSales)
